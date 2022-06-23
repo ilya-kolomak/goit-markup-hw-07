@@ -1,0 +1,36 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+ 
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--general-color);
+  background-color: var(--litter-color-white);
+}
+
+.list{
+  list-style: none;
+}
+
+  .top-title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    }
+
+    .section{
+      padding-top: 94px;
+      padding-bottom: 94px;
+    
+    }
+
+.link:hover, 
+.link:focus{
+  color:var(--aсcent-color) ;
+}

@@ -7,25 +7,16 @@
   
   
   .plan__title{
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
+    @include font(14px, 700, 1.71, 0.03em);
   text-transform: uppercase;
   margin-bottom: 10px;
   }
   
   .plan__text{
+    @include font(14px, null, 1.71, 0.03em);
   width: 270px;
-  font-size: 14px;
-  line-height: 1.71;
-  
-  letter-spacing: 0.03em;
-  
   color: var(--text-color);
   }
-  
-  
   
   
   .plan__icon-list{
@@ -39,7 +30,8 @@
     background-color: #F5F4FA;
     border-radius: 4px;
     margin-bottom: 30px;
+    &:last-child{
+      margin-right: 0;
+    }
   }
-  .plan__icon-list:last-child{
-    margin-right: 0;
-  }
+  

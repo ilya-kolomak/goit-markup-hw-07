@@ -6,12 +6,9 @@
     margin-bottom: 50px;
   }
   .our-team__title-text{
+    @include font(16px, 500, 1.18, 0.03em);
     font-family: 'Roboto';
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
   color: var(--general-color);
   margin-bottom: 10px;
   }
@@ -22,29 +19,24 @@
   
   }
   
-  .our-team__cards:not(:last-child){
-    margin-right: 30px;
-  }
+  
   
   .our-team__cards{
    
   justify-content: space-between;
-   
   width: 270px;
-  
-  
   background: #FFFFFF;
-  
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  &:not(:last-child){
+    margin-right: 30px;
+  }
   }
   
    .our-team__text{
+    @include font(16px, null, 1.18, 0.03em);
     font-family: 'Roboto';
     font-style: normal;
-    font-size: 16px;
-    line-height: 1.18;
-    letter-spacing: 0.03em;
     color: var(--text-color);
    }
    
@@ -52,10 +44,11 @@
      width: 44px;
      height: 44px;
      margin-right: 10px;
+    &:last-child{
+      margin-right: 0;
+    }
    }
-   .team-soc-list__item:last-child{
-     margin-right: 0;
-   }
+   
   
    .team-soc-list__link{
      width: 100%;
@@ -66,17 +59,15 @@
      align-items: center;
      justify-content: center;
      transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   }
-  
-   .team-soc-list__link:hover,
-   .team-soc-list__link:focus{
+     &:hover,
+     &:focus{
      background-color: var(--aсcent-color);
    }
-  
-   .team-soc-list__link:hover .team-soc-list__icon,
-   .team-soc-list__link:focus .team-soc-list__icon{
-     fill: var(--litter-color-white);
    }
+  
+   
+  
+   
   
    .team-soc-list{
      margin-top: 16px;
@@ -86,6 +77,10 @@
   
    .team-soc-list__icon{
      fill: #AFB1B8;
+     .team-soc-list__link:hover &,
+   .team-soc-list__link:focus &{
+     fill: var(--litter-color-white);
+   }
    }
   
   .our-team__list-text{

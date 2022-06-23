@@ -1,9 +1,9 @@
 .logo{
+  
+  @include font(26px, 700, 1.19, null);
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
-   font-weight: 700;
-   font-size: 26px;
-   line-height: 1.19;
+   
    color: var(--general-color);
    
    
@@ -21,20 +21,16 @@
    .header{
      height: var(--heder-height);
      border-bottom: 1px solid #ECECEC;
+      .container{
+      display: flex;
+      align-items: center;
+    }
    }
    
-   
-   
-   
-   .header .container{
-     display: flex;
-     align-items: center;
-   }
    
    .currentlink{
      color: var(--aсcent-color);
    }
-   
    
    span{
      color:var(--aсcent-color) ;
@@ -43,14 +39,10 @@
    
    
    .nav__list{
+    @include font(null, 500, 1.14, 0.02em);
      display: flex;
      align-items: center;
-   font-weight: 500;
    color: var(--general-color);
-   line-height: 1.14;
-   letter-spacing: 0.02em;
-   
-   
    }
    
    
@@ -63,16 +55,20 @@
    }
    .nav__top-link{
      transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   }
+     &:hover ,
+     &:focus {
+       color: var(--aсcent-color);
+     }
    
-   
-   .nav__top-link:hover ,
-   .nav__top-link:focus {
-     color: var(--aсcent-color);
-   }
+    }
+
    .list-link__icon{
      fill:var(--text-color) ;
      margin-right: 10px;
+     .list-link__contact:hover &,
+     .list-link__contact:focus &{
+       fill: var(--aсcent-color);
+     }
    }
    
    .list-link__contact{
@@ -83,20 +79,21 @@
      display: flex;
      align-items: center;
      transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   }
-   .list-link__contact:hover ,
-   .list-link__contact:focus {
-     color: var(--aсcent-color);
-   }
-   .list-link__contact:hover .list-link__icon,
-   .list-link__contact:focus .list-link__icon{
-     fill: var(--aсcent-color);
-   }
-   .nav__item:not(:last-child), .list-link__item:not(:last-child){
-     margin-right:50px ;
-   }
+     &:hover ,
+     &:focus {
+       color: var(--aсcent-color);
+     }
+   
+    }
+    .list-link__item:not(:last-child){
+      margin-right:50px ;
+    }
+
    .nav__item{
      position:relative;
+     &:not(:last-child){
+     margin-right:50px ;
+   }
    }
    .link.currentlink::after{
      content: '';
